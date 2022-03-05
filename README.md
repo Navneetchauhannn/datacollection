@@ -1,0 +1,2 @@
+# datacollection
+magazine data collection
