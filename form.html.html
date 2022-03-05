@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages | Firebase</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="signout">
+            <button onclick="signOut()" id="signOut">SignOut</button><br>
+        </div>
+        <form action="" id="contactForm" method="post">
+
+            <div class="inputBox">
+                <label for="role">select role:</label>
+                <select>
+                  <option vlaue="student">student</option>
+                  <option value="faculty">faculty</option>
+                </select>
+            </div>
+          
+            <div class="inputBox">
+                <label for="name">full name:</label><br>
+                <input type="text" id="name" required />
+            </div>
+
+            <div class="inputBox">
+                <label for="enrollment">enrollment:</label><br>
+                <input type="text" id="enrollment" required />
+            </div>
+
+            <div class="inputBox">
+                <label for="name">email Id:</label><br>
+                <input type="email" id="emailid" required />
+            </div>
+
+            <div class="inputBox">
+                <label for="dept">department:</label><br>
+                <input type="text" id="dept" name="dept" value="Information Technology" readonly>
+            </div>
+          
+            <div class="inputBox">
+                <label for="major">achievement catagory</label>
+                <select id="ctg" name="maj">  <!-- onchange="populate(this.id)" -->
+                    <option value="TechEvent">winner at technical event</option>
+                    <option value="SportCultural">sports and cultural</option>
+                    <option value="CommunityStartup">community / startup</option>
+                    <option value="ResearchArticle">published research paper / article</option>
+                    <option value="Seminar">leadership / management</option>
+                    <option value="Inovetion">inovation and project</option>
+                </select>
+            </div>
+          
+            <div class="inputBox">
+                <label for="event">event name:</label><br>
+                <input type="text" id="event" name="event" required />
+            </div>
+          
+            <!-- <div id="techevent"></div>
+            <div id="sportcult"></div>
+            <div id="communitystartup"></div>
+            <div id="researcharticle"></div>
+            <div id="seminar"></div>
+            <div id="inovation"></div> -->
+          
+            <div class="inputBox">
+                <label for="Date">Event Start Date:</label><br>
+                <input type="date" id="sdate" name="sdate" required><br>
+            </div>
+
+            <div class="inputBox">
+                <label for="Date">Event End Date:</label><br>
+                <input type="date" id="edate" name="edate" required><br>
+            </div>
+
+
+
+            <div class="inputBox">
+                <label for="desc">discription:</label><br>
+                <textarea id="msgContent" cols="5" rows="5"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <label for="cars">select level:</label>
+                <select id="level" name="lvl" aria-required>
+                    <option value="College">College</option>
+                    <option value="State">State</option>
+                    <option value="National">National</option>
+                    <option value="International">International</option>
+                </select><br>
+            </div>
+          
+            <div class="inputBox">
+                <label for="myfile">Certificate:</label><br>
+                <input type="file" id="myfile" name="myfile" multiple><br>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+            <div class="alert">Your message sent</div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./form.js"></script>
+</body>
+
+</html>
