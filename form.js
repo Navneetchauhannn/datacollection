@@ -17,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 function signOut() {
     auth.signOut();
-    alert("SignOut Successfully from System");
+    // alert("SignOut Successfully from System");
     window.location.href = "index.html"
 }
 
@@ -51,17 +51,17 @@ var contactFormDB = firebase.database().ref("contactForm");
 // 	}
 // function populate(s1){
 // 	var s1 = document.getElementById(s1);
-// 	if(s1.value == "TechEvent"){
+// 	if(s1.value == "techevent"){
 // 		techevent();
-// 	} else if(s1.value == "SportCultural"){
+// 	} else if(s1.value == "sportcult"){
 // 		sportcult();
-// 	} else if(s1.value == "CommunityStartup"){
+// 	} else if(s1.value == "communitystartup"){
 // 		communitystartup();
-// 	} else if(s1.value == "ResearchArticle"){
+// 	} else if(s1.value == "researcharticle"){
 // 		researcharticle();
-// 	} else if(s1.value == "Seminar"){
+// 	} else if(s1.value == "seminar"){
 // 		seminar();
-// 	} else if(s1.value == "Inovetion"){
+// 	} else if(s1.value == "inovation"){
 // 		inovation();
 // 	}
 // }
@@ -75,10 +75,13 @@ document.getElementById("contactForm").addEventListener("submit", submitForm);
 function submitForm(e) {
     e.preventDefault();
 
+    var role = getElementVal("role");
     var name = getElementVal("name");
     var emailid = getElementVal("emailid");
     var msgContent = getElementVal("msgContent");
     var enrollment = getElementVal("enrollment");
+    var sem = getElementVal("sem");
+    var div = getElementVal("div");
     var event = getElementVal("event");
     var sdate = getElementVal("sdate");
     var edate = getElementVal("edate");
@@ -93,7 +96,7 @@ function submitForm(e) {
     // var inovation = getElementVal("inovation");
 
   //  techevent, sportcult, communitystartup, researcharticle, seminar, inovation, 
-    saveMessages(name, emailid, msgContent, enrollment,event, sdate, edate, level, ctg, myfile);
+    saveMessages(role, name, emailid, msgContent, enrollment, sem, div, event, sdate, edate, level, ctg, myfile);
 
     //   enable alert
     document.querySelector(".alert").style.display = "block";
@@ -107,14 +110,17 @@ function submitForm(e) {
     document.getElementById("contactForm").reset();
 }
 // techevent, sportcult, communitystartup, researcharticle, seminar, inovation, 
-const saveMessages = (name, emailid, msgContent, enrollment, event, sdate, edate, level, ctg, myfile) => {
+const saveMessages = (role, name, emailid, msgContent, enrollment, sem, div, event, sdate, edate, level, ctg, myfile) => {
     var newContactForm = contactFormDB.push();
 
     newContactForm.set({
+        role: role,
         name: name,
         emailid: emailid,
         msgContent: msgContent,
         enrollment: enrollment,
+        sem: sem,
+        div: div,
         // techevent: techevent,
         // sportcult: sportcult,
         // communitystartup: communitystartup,
