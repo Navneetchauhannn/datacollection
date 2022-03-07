@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Messages | Firebase</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+         <a href="#" class="logo">
+           <img src="logo.jpg" alt="Logo" style="border-radius: 4px; margin-top: 3px;">
+         </a>
+
+         <span class="manu-space"></span>
+
+         <ul class="manu">    
+          <li><a href="student.html">Student</a></li>
+          <li><a href="issued.html">issued</a></li>
+          <li><div class="signout">
+            <button onclick="signOut()" id="signOut">SignOut</button><br>
+        </div></li>
+         </ul>
+    </nav>
+
+    <div class="container">
+        <form action="" id="contactForm" method="post">
+
+            <div class="inputBox">
+                <label for="role">role: Faculty</label>
+            </div>
+          
+            <div class="inputBox">
+                <label for="name">full name:</label><br>
+                <input type="text" id="name" required />
+            </div>
+
+            <div class="inputBox">
+                <label for="name">email Id:</label><br>
+                <input type="email" id="emailid"/>
+            </div>
+
+          
+            <div class="inputBox">
+                <label for="major">achievement catagory:</label>
+                <select id="ctg" name="maj">
+                  <option selected disabled value>select *</option>
+                    <option value="winner at technical event">winner at technical event</option>
+                    <option value="sports and cultural">sports and cultural</option>
+                    <option value="community / startup">community / startup</option>
+                    <option value="ublished research paper / article">published research paper / article</option>
+                    <option value="leadership / management">leadership / management</option>
+                    <option value="inovation and project">inovation and project</option>
+                </select>
+            </div>
+          
+            <div class="inputBox">
+                <label for="event">event name:</label><br>
+                <input type="text" id="event" name="event" required />
+            </div>
+          
+          
+            <div class="inputBox">
+                <label for="Date">event start date:</label><br>
+                <input type="date" id="sdate" name="sdate" required><br>
+            </div>
+
+            <div class="inputBox">
+                <label for="Date">event end date:</label><br>
+                <input type="date" id="edate" name="edate" required><br>
+            </div>
+
+
+
+            <div class="inputBox">
+                <label for="desc">discription:</label><br>
+                <textarea id="msgContent" cols="5" rows="5"></textarea>
+            </div>
+
+            <div class="inputBox">
+                <label for="cars">select level:</label>
+                <select id="level" name="lvl" aria-required>
+                  <option selected disabled value>level *</option>
+                    <option value="College">College</option>
+                    <option value="State">State</option>
+                    <option value="National">National</option>
+                    <option value="International">International</option>
+                </select><br>
+            </div>
+          
+            <div class="inputBox">
+                <label for="myfile">phtograps or documents if any:</label>
+                <input type="file" id="myfile" name="myfile" multiple><br>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+            <div class="alert">Your message sent</div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./form.js"></script>
+</body>
+
+</html>
