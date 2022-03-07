@@ -41,9 +41,10 @@ function signIn() {
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
         var email = user.email;
-        alert("Active user " + email);
-        window.location.href = "form.html";
-    } else {
-        alert("No Active user Found");
+        // alert("Active user " + email);
+        window.location.href = "student.html";
     }
+    // else {
+    //     alert("No Active user Found");
+    // }
 })
