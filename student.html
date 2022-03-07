@@ -5,22 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Messages | Firebase</title>
+    <title>Student Messages | Firebase</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <nav class="nav-bar">
-         <a href="https://project-1.navneetchauhan1.repl.co/" class="logo">
-           <img src="NATURE.jpg" alt="Logo">
+         <a href="#" class="logo">
+           <img src="logo.jpg" alt="Logo" style="border-radius: 4px; margin-top: 3px;">
          </a>
 
          <span class="manu-space"></span>
 
-         <ul class="manu">
-          <li><a href="form.html">form</a></li>    
-          <li><a href="#">issued magazine</a></li>
-          <li><a href="#">contact</a></li>
+         <ul class="manu">    
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="issued.html">issued</a></li>
           <li><div class="signout">
             <button onclick="signOut()" id="signOut">SignOut</button><br>
         </div></li>
@@ -31,42 +30,54 @@
         <form action="" id="contactForm" method="post">
 
             <div class="inputBox">
-                <label for="role">select role:</label>
-                <select>
-                  <option vlaue="student">student</option>
-                  <option value="faculty">faculty</option>
-                </select>
+                <label for="role">role: Student</label>
             </div>
           
             <div class="inputBox">
                 <label for="name">full name:</label><br>
-                <input type="text" id="name" required />
+                <input type="text" id="name" required/>
             </div>
 
             <div class="inputBox">
                 <label for="enrollment">enrollment:</label><br>
-                <input type="text" id="enrollment" required />
+                <input type="text" id="enrollment" required/>
             </div>
 
             <div class="inputBox">
                 <label for="name">email Id:</label><br>
-                <input type="email" id="emailid" required />
+                <input type="email" id="emailid"/>
             </div>
 
             <div class="inputBox">
-                <label for="dept">department:</label><br>
-                <input type="text" id="dept" name="dept" value="Information Technology" readonly>
+                <label for="sem">select semester:</label>
+                <select id="sem" name="sem" aria-required>
+                  <option selected disabled value">semester *</option>
+                  <option vlaue="1">1</option>
+                  <option value="2">2</option>
+                  <option vlaue="3">3</option>
+                  <option value="4">4</option>
+                  <option vlaue="5">5</option>
+                  <option value="6">6</option>
+                  <option vlaue="7">7/option>
+                  <option value="8">8</option>
+                </select>
+            </div>
+
+            <div class="inputBox">
+                <label for="role">division:</label>
+                <input type="text" id="div" name="div" required><br>
             </div>
           
             <div class="inputBox">
-                <label for="major">achievement catagory</label>
+                <label for="major">achievement catagory:</label>
                 <select id="ctg" name="maj">  <!-- onchange="populate(this.id)" -->
-                    <option value="TechEvent">winner at technical event</option>
-                    <option value="SportCultural">sports and cultural</option>
-                    <option value="CommunityStartup">community / startup</option>
-                    <option value="ResearchArticle">published research paper / article</option>
-                    <option value="Seminar">leadership / management</option>
-                    <option value="Inovetion">inovation and project</option>
+                  <option selected disabled value>select *</option>
+                    <option value="winner at technical event">winner at technical event</option>
+                    <option value="sports and cultural">sports and cultural</option>
+                    <option value="community / startup">community / startup</option>
+                    <option value="ublished research paper / article">published research paper / article</option>
+                    <option value="leadership / management">leadership / management</option>
+                    <option value="inovation and project">inovation and project</option>
                 </select>
             </div>
           
@@ -75,20 +86,20 @@
                 <input type="text" id="event" name="event" required />
             </div>
           
-            <!-- <div id="techevent"></div>
-            <div id="sportcult"></div>
-            <div id="communitystartup"></div>
-            <div id="researcharticle"></div>
-            <div id="seminar"></div>
-            <div id="inovation"></div> -->
+            <!-- <div class="techevent"></div>
+            <div class="sportcult"></div>
+            <div class="communitystartup"></div>
+            <div class="researcharticle"></div>
+            <div class="seminar"></div>
+            <div class="inovation"></div> -->
           
             <div class="inputBox">
-                <label for="Date">Event Start Date:</label><br>
+                <label for="Date">event start date:</label><br>
                 <input type="date" id="sdate" name="sdate" required><br>
             </div>
 
             <div class="inputBox">
-                <label for="Date">Event End Date:</label><br>
+                <label for="Date">event end date:</label><br>
                 <input type="date" id="edate" name="edate" required><br>
             </div>
 
@@ -102,6 +113,7 @@
             <div class="inputBox">
                 <label for="cars">select level:</label>
                 <select id="level" name="lvl" aria-required>
+                  <option selected disabled value>level *</option>
                     <option value="College">College</option>
                     <option value="State">State</option>
                     <option value="National">National</option>
@@ -110,7 +122,7 @@
             </div>
           
             <div class="inputBox">
-                <label for="myfile">Certificate:</label><br>
+                <label for="myfile">Certificate:</label>
                 <input type="file" id="myfile" name="myfile" multiple><br>
             </div>
 
