@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      nav {
+ display: flex;
+ background-color: rgb(0, 119, 255);;
+ justify-content: space-around;
+ align-items: center;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+ z-index: 1;
+}
+
+.manu {
+ display: flex;
+ list-style: none;
+}
+
+.manu li a {
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0px 22px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: white;
+  display: flex;
+}
+.logo img {
+  height: 45px;
+}
+
+a {
+  text-decoration: none;
+}
+.manu li a:hover {
+  background: rgb(0, 17, 255);
+  color: white;
+  box-shadow: 5px 10px 30px rgba(24, 139, 119, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+h3 {
+  margin-top: 100px;
+}
+center {
+  padding-bottom: 20px;
+}
+.row1 {
+  padding-left: 20px;
+}
+    </style>
+    <!-- <link rel="stylesheet" href="./issued.css"> -->
+    <title>issued magazines</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+         <a href="#" class="logo">
+           <img src="logo.jpg" alt="Logo" style="border-radius: 4px; margin-top: 3px;">
+         </a>
+
+         <span class="manu-space"></span>
+
+         <ul class="manu">    
+          <li><a href="index.html">login</a></li>
+          <li><a href="#">contact</a></li>
+         </ul>
+    </nav>
+    
+    <center>
+      <h3>All issued magazines are here</h3>
+    </center>
+    
+    <div class="row1">
+      <label>issue 2:</label><br>
+      <a href="issue2.pdf" >Download PDF</a>
+    </div>
+  </body>
+</html>
