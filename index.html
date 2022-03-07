@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="    viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
     <script src="./login.js"></script>
@@ -14,36 +14,31 @@
 
 <body>
     <nav class="nav-bar">
-         <a href="https://project-1.navneetchauhan1.repl.co/" class="logo">
-           <img src="NATURE.jpg" alt="Logo">
+         <a href="#" class="logo">
+           <img src="logo.jpg" alt="Logo" style="border-radius: 4px; margin-top: 3px;">
          </a>
 
          <span class="manu-space"></span>
 
          <ul class="manu">    
-          <li><a href="#">issued magazine</a></li>
+          <li><a href="issued.html">issued magazine</a></li>
           <li><a href="#">contact</a></li>
          </ul>
     </nav>
   
-    <div class="heading">
-      <h2>Welcome To <br>Express-IT</h2>
-    </div>
-    
     <div class="logincontainer">
-        <div class="inputBox">
-            <input type="email" placeholder="email here" id="email">
-        </div>
+            <div class="inputBox">
+                <input type="email" id="email" placeholder="email here" />
+            </div>
 
-        <div class="inputBox">
-            <input type="password" placeholder="password here" id="password"><br>
-        </div>
-
-        <div class="inputBox">
-            <button onclick="signUp()" id="signUp">SignUp</button>
+            <div class="inputBox">
+                <input type="password" id="password" placeholder="password here" ><br>
+            </div>
+          
+            <div class="inputBox">
+            <button onclick="signUp()" id="signUp" style="margin-bottom: 10px;">SignUp</button>
             <button onclick="signIn()" id="signIp">SignIn</button>
-        </div>
+            </div>
     </div>
 </body>
-
 </html>
